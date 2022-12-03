@@ -12,3 +12,10 @@ class ReceiptForm(ModelForm):
             "category",
             "account",
         ]
+
+class ExpenseCategoryForm(ModelForm):
+    class Meta:
+        model = ExpenseCategory
+        fields = [
+            "name",
+        ]
