@@ -1,4 +1,6 @@
 from django import forms
+from django.forms import ModelForm
+from receipts.models import Account
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=150)
@@ -17,3 +19,5 @@ class SignUpForm(forms.Form):
         max_length=150,
         widget=forms.PasswordInput,
     )
+
+
