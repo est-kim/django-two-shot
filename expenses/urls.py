@@ -17,12 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import redirect
 
-def redirect_to_receipt_list(request):
+def redirect_to_home(request):
     return redirect("home")
 
 urlpatterns = [
+    path("", redirect_to_home, name="home"),
     path("admin/", admin.site.urls),
-    path("", redirect_to_receipt_list, name="receipt_list"),
     path("receipts/", include("receipts.urls")),
     path("accounts/", include("accounts.urls")),
 ]
